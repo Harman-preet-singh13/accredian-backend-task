@@ -1,4 +1,3 @@
-// database.js
 const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize('auth_accredian', 'root', '12345', {

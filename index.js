@@ -18,7 +18,7 @@ app.post('/register', async (req, res) => {
         res.status(201).json(newUser);
     } catch (error) {
         if (error.name === 'SequelizeUniqueConstraintError') {
-            // Handle unique constraint violation (username or email already exists)
+            
             res.status(400).json({ message: 'Username or email is already in use.' });
         } else {
             console.error(error);
@@ -44,7 +44,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
-// Sync Sequelize models with the database and start the server
+//  Sequelize models
 sequelize.sync().then(() => {
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);

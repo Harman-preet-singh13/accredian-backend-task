@@ -1,4 +1,3 @@
-// models/user.js
 const { Sequelize, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 
@@ -19,7 +18,7 @@ module.exports = (sequelize) => {
             allowNull: false,
         },
     }, {
-        // Add this option to disable timestamps
+        
         timestamps: false,
     });
 
